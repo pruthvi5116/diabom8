@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=0">
+<title>About Us</title>
+<style>
+* {box-sizing: border-box;}
+
+body { 
+  margin: 20;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: rgb(1, 0, 61);
+  padding: 80px 10px;
+  transition: 0.4s;
+  position: fixed;
+  width: 100%;
+  height: 90px;
+  top: 0;
+  z-index: 99;
+}
+
+#logo {
+  overflow: visible;
+  padding: 90px 50px;
+  transition: 0.4s;
+  position: fixed;
+  width: 30%;
+  height: 100px;
+  top: 0;
+  z-index: 99;
+  background-color: rgb(255, 255, 255);
+  margin-top:40px;
+  margin-bottom: 10px;
+  border-radius: 250px;
+  box-shadow: inset 0 0 30px grey;
+}
+
+#navbar a {
+  float: left;
+  color: orange;
+  text-align: center;
+  padding: 20px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 95%;
+  border-radius: 250px;
+}
+
+#navbar #logo {
+  bottom: 100px;
+}
+#logo:hover{
+background-color: rgb(0, 255, 13);
+}
+
+#navbar a:hover {
+  background-color:  dodgerblue;
+  color: rgb(0, 0, 0);
+}
+#active{
+  background-color: rgb(255, 238, 0);
+}
+#navbar a.active {
+  background-color: rgb(1, 0, 61);
+  color: orange;
+}
+#navbar a.active:hover {
+  background-color: rgb(9, 255, 0);
+  color: rgb(0, 0, 0);
+}
+
+
+#navbar-right {
+  float: right;
+}
+
+@media screen and (max-width: 580px) {
+  #navbar {
+    padding: 20px 10px !important;
+  }
+  #navbar a {
+    float: none;
+    display: block;
+    text-align: center;
+  }
+  #navbar-right {
+    float: right;
+  }
+}
+h1{
+    color: rgb(0, 0, 0);
+    margin-left: 30px;
+    text-align: center;
+    font-family: fantasy,Copperplate;
+    
+}
+
+h2{
+    color: rgb(47, 1, 90);
+    margin-left: 30px;
+    font-size: 100px;
+    font-family: Georgia,Serif;
+}
+
+h3{
+    color:rgb(47, 1, 90);
+    font-size: 55px;
+    margin-left: 30px;
+    font-family: Georgia,Serif;
+}
+
+
+.header{
+    background-color:rgb(0, 2, 100);
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+
+}
+
+
+.site-description{
+    background-color: #011af8;
+    display: flex;
+    flex-direction: column;
+    justify-content: first baseline;
+
+}
+
+
+
+.footer{
+    background-color: #000000;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+p,h2{
+
+    text-align: center;
+}
+
+h1{
+
+    text-align: center;
+}
+/* here whe slidshow starts////////////////////////////////////////////////////////////*/
+
+      * {box-sizing: border-box}
+      body {font-family: Verdana, sans-serif; margin:0}
+      .mySlides {display: none}
+      img {vertical-align: middle;}
+      
+      /* Slideshow container */
+      .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+      }
+      
+      /* Next & previous buttons */
+      .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+      }
+      
+      /* Position the "next button" to the right */
+      .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+      
+      /* On hover, add a black background color with a little bit see-through */
+      .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
+      }
+      
+      /* Caption text */
+      .text {
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+      }
+      
+      /* Number text (1/3 etc) */
+      .numbertext {
+        color: #ffffff;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+      }
+      
+      /* The dots/bullets/indicators */
+      .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
+      
+      .active, .dot:hover {
+        background-color: #717171;
+      }
+      
+      /* Fading animation */
+      .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+      
+      @-webkit-keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+      }
+      
+      @keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+      }
+      
+      /* On smaller screens, decrease text size */
+      @media only screen and (max-width: 400px) {
+        .prev, .next,.text {font-size: 11px}
+      }
+     /* here the code of slidshow ends ///////////////////////////////////////*/
+
+/* width */
+::-webkit-scrollbar {
+    width: 20px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #ff6600;
+    border-radius : 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ff6600; 
+  }
+body{
+  background-color: rgb(255, 255, 255);
+      
+}
+.aboutus{
+    margin-top: 15; 
+}
+.aboutus:hover{
+    opacity: 0.5;
+}
+
+.gallery{
+    margin-top: 15;
+}
+.gallery:hover{
+    opacity: 0.5;
+}
+.treeimg{
+height: 700;
+width: 1350;
+
+}
+
+ 
+
+.diabom1{
+    height: 150;
+    width: 910;
+    
+}
+
+
+.border1{
+    height: 400;
+    width: 1350;
+}
+.caution{
+    height: 400;
+    width: 1350;
+    border: 30;
+    border-color: #fa2121;
+  
+}
+
+/*//////////////////////////////////////////////*/
+
+.menu{
+    margin-right: 100px;
+    height: 100;
+    width: 1350;
+    color: rgb(1, 0, 61);
+}
+
+
+/* Rounded border */
+hr.rounded {
+ 
+  border-top: 20px solid rgb(1, 0, 61);
+  border-radius: 5px;
+}
+.menu a{
+    margin-left: 20px;
+    height: 40;
+    width: 1350;
+    color: rgb(1, 0, 61);
+  
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 200px; /* Should be removed. Only for demonstration */
+  text-align: center;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+
+}
+ 
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 5px 610px;
+  font-size: 30px;
+  text-align: left;
+
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.next2 {
+  background-color: #00ff08;
+  color: white;
+  border-radius: 20px;
+
+}
+
+.sidebar {
+  height: 100%;
+  width: 150px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 300px;
+}
+
+.sidebar a {
+  padding: 6px 8px 20px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #ffffff;
+  display: block;
+}
+
+.sidebar a:hover {
+  color: #a1a1a1;
+  background-color: rgb(0, 0, 0);
+}
+
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#section1 {
+  height: auto;
+  background-color: rgb(123, 255, 0);
+}
+ 
+
+#section2 {
+
+  text-align: left;
+  height: 200;
+  background-color: rgb(255, 166, 0);
+}
+#section3 {
+  height: auto;
+  background-color: #00ffff;
+}
+
+#section4 {
+  height: auto;
+  background-color: rgb(255, 255, 255);
+  }
+  .onclickbg{
+    background-color: rgb(0, 255, 200);
+}
+.onclickbg:hover{
+  background-color: dodgerblue;
+}
+
+.div1 {
+  width: 200px;
+  height: 70px;
+  background-color: rgb(0, 255, 0);
+  position: relative;
+  animation-name: example;
+  animation-duration: 4s;
+    border-radius: 20px;
+       box-shadow: inset 0 0 10px grey;
+       padding:5px;
+  font-family: "Serif", Georgia;
+color: black;
+  padding-top: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.center{
+padding:10px;
+  font-family: "Serif", Georgia;
+color: black;
+  padding-top: 1px;
+  text-align: center;
+  }
+@keyframes example {
+  50% {transform: rotate(180deg);}
+  0%   {background-color:rgb(255, 154, 4); left:0px; top:0px;}
+  25%  {background-color:yellow; left:500px; top:0px;}
+
+  100% {background-color:rgb(0, 255, 242); left:0px; top:0px;}
+}
+
+.div2 {
+  width: 200px;
+  height: 70px;
+  background-color: orange;
+  position: relative;
+  animation-name: example;
+  animation-duration: 8s;
+    border-radius: 20px;
+       box-shadow: inset 0 0 10px grey;
+       padding:5px;
+  font-family: "Serif", Georgia;
+color: black;
+padding-top: 20px;
+  font-size: 30px;
+  text-align: center;
+  animation-delay: 5s;
+}
+.center2{
+
+  font-family: "Serif", Georgia;
+color: black;
+  padding-top: 1px;
+  text-align: center;
+  }
+@keyframes example {
+  50% {transform: rotate(180deg);}
+  0%   {background-color:rgb(255, 154, 4); left:0px; top:0px;}
+  25%  {background-color:yellow,blue; left:900px; top:0px;}
+
+  100% {background-color:orange; left:0px; top:0px;}
+}
+.div3 {
+  width: 200px;
+  height: 70px;
+  background-color: rgb(0, 255, 255);
+  position: relative;
+  animation-name: example;
+  animation-duration: 8s;
+    border-radius: 20px;
+       box-shadow: inset 0 0 10px grey;
+       padding:5px;
+  font-family: "Serif", Georgia;
+color: black;
+padding-top: 20px;
+  font-size: 30px;
+  text-align: center;
+  animation-delay: 10s;
+}
+
+.center2{
+
+  font-family: "Serif", Georgia;
+color: black;
+  padding-top: 1px;
+  text-align: center;
+  }
+@keyframes example {
+  50% {transform: rotate(180deg);}
+  0%   {background-color:rgb(255, 154, 4); left:0px; top:0px;}
+  25%  {background-color:yellow; left:900px; top:0px;}
+
+  100% {background-color:rgb(0, 255, 242); left:0px; top:0px;}
+}
+
+</style>
+</head>
+<body>
+<div>
+
+<div id="navbar">
+  <a href="#default"id="logo"class = "logo1" ><img src="topbarlogo.png"/> </a>
+  
+  <div id="navbar-right">
+  
+    <a class="active" href="index.html">Home</a>
+    <a href="Aboutus.html">About Us</a>
+      <a class="active" href="Gallery.html">Gallery</a>
+      <a href="flip.html">Cautions And Directions</a>
+    <a class="active" href="Contents.html">Contents</a>
+    <a href="knowmore.html">Know More</a>
+    
+  </div>
+  
+</div>
+
+</div>
+<!--FROM HERE THE MAIN CODE STARTS OF ABOUT US/////////////////////////////////////////////////ABOUT US STARTS//////////-->
+
+
+<div style="margin-top:210px;padding:15px 15px 2500px;font-size:30px">
+    <div class="slideshow-container">
+      <div class="main" id="section4">
+
+        <br>
+        <br>
+        <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="Text2.png" style="width:100%">
+        <h1>We Care Your  Health</h1>
+        </div>
+        
+        <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="Text3.png" style="width:100%">
+       
+        
+        </div>
+        
+        
+        
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+    
+        </div>
+        
+        <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+        }
+        var myIndex = 0;
+        carousel();
+        
+        function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}
+        x[myIndex-1].style.display = "block";
+        setTimeout(carousel, 4000);
+        }
+        </script>
+    </div>
+ <hr class="rounded">
+ <div style="margin-top:200px;padding:15px 15px 2500px;font-size:20px ">
+
+  <div class="sidebar">
+    <a href="#section4"><i class="fa fa-fw fa-home"></i># Home</a>
+    <a href="#section1"># About Us</a>
+    <a href="#section2"># Aim</a>
+    <a href="#section3"># Vision</a>
+    
+  </div>
+  
+  <div class="main" id="section">
+  <div class = "div1">About Us</div>
+</div> 
+<br>
+<br>
+
+  <div class="main" id="section1">
+ <br>
+    <br>
+ <h3> Dr. Smita Patil’s Ayurveda clinics is the finest, integrated, retail chain of authentic Ayurvedic Health
+    care in treatment of Health and combined team experience in the Ayurveda and homeopathic industry.<br>
+    <br>
+   
+    </div>
+
+    <div class="main" id="section">
+      <div class = "div2"># AIM</div>
+    </div> 
+    
+    <div class="main" id="section2">
+      
+  <h3>
+     Our aim is to create a commanding and leading presence in Ayurvedic care segment through focused
+     investment and strategic acquisitions.<br>
+    <br>
+    <br>
+
+    
+  </h3>
+</div>
+<div class="main" id="section">
+  <div class = "div3"># Vision</div>
+</div> 
+
+  <h3>
+  
+    <div class="main" id="section3">
+
+  
+     Our vision is to deliver the benefits of Ayurvedic  care to every
+    individual of the society by providing them quality service and
+    experience.
+<br>
+<br>
+
+    </h3>
+   
+    <br>
+    <br>
+    <br>
+    
+
+    
+    </div>
+
+   
+
+  
+
+     
+     
+  
+   
+     
+      
+  
+  <!--HERE THE MAIN CODE ENDS OF ABOUT US/////////////////////////////////////////////////ABOUT US ENDS//////////-->
+  
+  
+  <script>
+    // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+        document.getElementById("navbar").style.padding = "20px 20px";
+        document.getElementById("logo").style.display = "block";
+        
+      } 
+       else {
+        document.getElementById("navbar").style.padding = "80px 20px";
+        document.getElementById("logo").style.display = "block";
+      }
+    }
+    </script>
+
+</body>
+</html>
+
+
+

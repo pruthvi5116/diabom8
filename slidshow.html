@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=0">
+<title>Contents</title>
+<style>
+* {box-sizing: border-box;}
+
+body { 
+  margin: 10;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: rgb(1, 0, 61);
+  padding: 90px 10px;
+  transition: 0.4s;
+  position: fixed;
+  width: 100%;
+  height: 90px;
+  top: 0;
+  z-index: 99;
+
+}
+
+#logo {
+  overflow: visible;
+  padding: 90px 50px;
+  transition: 0.4s;
+  position: fixed;
+  width: 30%;
+  height: 100px;
+  top: 0;
+  z-index: 99;
+  background-color: rgb(255, 255, 255);
+  margin-top:40px;
+  margin-bottom: 40px;
+  border-radius: 250px;
+  box-shadow: inset 0 0 30px grey;
+}
+
+#navbar a {
+  float: left;
+  color: orange;
+  text-align: center;
+  padding: 20px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 250px;
+}
+
+#navbar #logo {
+  bottom: 100px;
+}
+#logo:hover{
+background-color: rgb(0, 255, 13);
+}
+
+#navbar a:hover {
+  background-color:  dodgerblue;
+  color: rgb(0, 0, 0);
+}
+#active{
+  background-color: rgb(255, 238, 0);
+}
+#navbar a.active {
+  background-color: rgb(1, 0, 61);
+  color: orange;
+}
+#navbar a.active:hover {
+  background-color: rgb(9, 255, 0);
+  color: rgb(0, 0, 0);
+}
+
+
+#navbar-right {
+  float: right;
+}
+
+@media screen and (max-width: 580px) {
+  #navbar {
+    padding: 20px 10px !important;
+  }
+  #navbar a {
+    float: none;
+    display: block;
+    text-align: center;
+  }
+  #navbar-right {
+    float: none;
+  }
+}
+h1{
+    color: rgb(255, 54, 4);
+    margin-left: 30px;
+    text-align: center;
+    
+}
+
+h2{
+    color: rgb(47, 1, 90);
+    margin-left: 30px;
+    font-size: 100px;
+ 
+}
+h3{
+    color: rgb(0, 0, 0);
+    margin-left: 30px;
+    
+}
+
+
+.header{
+    background-color:rgb(0, 2, 100);
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+
+}
+
+
+.site-description{
+    background-color: #011af8;
+    display: flex;
+    flex-direction: column;
+    justify-content: first baseline;
+
+}
+
+
+
+.footer{
+    background-color: #000000;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+p,h2{
+
+    text-align: center;
+}
+
+h1{
+
+    text-align: center;
+}
+/* here whe slidshow starts////////////////////////////////////////////////////////////*/
+
+      * {box-sizing: border-box}
+      body {font-family: Verdana, sans-serif; margin:0}
+      .mySlides {display: none}
+      img {vertical-align: middle;}
+      
+      /* Slideshow container */
+      .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+      }
+      
+      /* Next & previous buttons */
+      .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+      }
+      
+      /* Position the "next button" to the right */
+      .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+      
+      /* On hover, add a black background color with a little bit see-through */
+      .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
+      }
+      
+      /* Caption text */
+      .text {
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+      }
+      
+      /* Number text (1/3 etc) */
+      .numbertext {
+        color: #ffffff;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+      }
+      
+      /* The dots/bullets/indicators */
+      .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
+      
+      .active, .dot:hover {
+        background-color: #717171;
+      }
+      
+      /* Fading animation */
+      .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+      
+      @-webkit-keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+      }
+      
+      @keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+      }
+      
+      /* On smaller screens, decrease text size */
+      @media only screen and (max-width: 400px) {
+        .prev, .next,.text {font-size: 11px}
+      }
+     /* here the code of slidshow ends ///////////////////////////////////////*/
+
+/* width */
+::-webkit-scrollbar {
+    width: 20px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #ff6600;
+    border-radius : 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ff6600; 
+  }
+body{
+    background-color: #ffffff;
+      
+}
+.aboutus{
+    margin-top: 15; 
+}
+.aboutus:hover{
+    opacity: 0.5;
+}
+
+.gallery{
+    margin-top: 15;
+}
+.gallery:hover{
+    opacity: 0.5;
+}
+.treeimg{
+height: 700;
+width: 1350;
+
+}
+
+.blue1{
+    height: 20;
+    width: 1350;
+}
+
+
+.diabom1{
+    height: 150;
+    width: 910;
+    
+}
+
+.wave{
+    width: 1350;
+    height: 150;
+    grid-area: auto;
+}
+
+.border1{
+    height: 400;
+    width: 1350;
+}
+.caution{
+    height: 400;
+    width: 1350;
+    border: 30;
+    border-color: #fa2121;
+  
+}
+
+/*//////////////////////////////////////////////*/
+
+.menu{
+    margin-right: 100px;
+    height: 100;
+    width: 1350;
+    color: rgb(1, 0, 61);
+}
+
+
+.menu a{
+    margin-left: 20px;
+    height: 40;
+    width: 1350;
+    color: rgb(1, 0, 61);
+  
+}
+a:link{
+    color: #29f800;
+   
+}
+
+a:visited{
+    color:#332828;
+}
+.diabomimg1{
+    width: 1350;
+}
+
+
+.diabomimg2{
+    width: 1350;
+}
+
+
+.diabomimg3{
+    width: 1350;
+}
+
+
+.diabomimg4{
+    width: 1350;
+}
+
+.diabomimg5{
+    width: 1350;
+}
+
+
+
+
+.diabomimg6{
+    width: 1350;
+}
+
+
+.diabomimg7{
+    width: 1350;
+}
+
+/* Rounded border */
+hr.rounded {
+ 
+  border-top: 20px solid rgb(1, 0, 61);
+  border-radius: 5px;
+}
+ 
+hr.rounded1 {
+
+border-top: 20px solid rgb(255, 0, 0);
+border-radius: 5px;
+}
+hr.rounded2 {
+
+border-top: 20px solid rgb(23, 80, 0);
+border-radius: 5px;
+}
+.next2 {
+  text-decoration: none;
+  display: inline-block;
+  padding: 5px 610px;
+  font-size: 30px;
+  text-align: left;
+  background-color: #00ff08;
+  color: white;
+  border-radius: 50px;
+}
+.next2:hover{
+  background-color: rgb(23, 117, 14)
+}
+
+
+
+
+
+</style>
+</head>
+<body>
+<div>
+<div id="navbar">
+  <a href="#default"id="logo"class = "logo1" ><img src="topbarlogo.png"/></a>
+  <div id="navbar-right">
+
+    <a class="active" href="index.html">Home</a>
+    <a href="Aboutus.html">About Us</a>
+      <a class="active" href="Gallery.html">Gallery</a>
+      <a href="flip.html">Cautions And Directions</a>
+    <a class="active" href="Contents.html">Contents</a>
+  </div>
+</div>
+
+</div>
+<!--FROM HERE THE MAIN CODE STARTS OF ABOUT US/////////////////////////////////////////////////ABOUT US STARTS//////////-->
+<div style="margin-top:210px;padding:15px 15px 2500px;font-size:30px">
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="Text2.png" style="width:100%">
+        <h1>We Care Your  Health</h1>
+        </div>
+        
+        <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="Text3.png" style="width:100%">
+       
+        
+        </div>
+        
+        
+        
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+    
+        </div>
+        
+        <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+        }
+        var myIndex = 0;
+        carousel();
+        
+        function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}
+        x[myIndex-1].style.display = "block";
+        setTimeout(carousel, 4000);
+        }
+ 
+        </script>
+        <!--106-->
+ <head>
+   <hr class="rounded"/>
+   <h1>Contents :- </h1>
+   <h2>1) Jamun beej –</h2>
+    <h3>Ayurveda suggest jamun as highly effective fruit while fighting against diabetes.
+    The seeds contain jambolin and Jambozine that slow down the rate of sugar
+    released in to blood and increase insulin level in the body.it convert starch in to 
+    energy and reduce the symptoms of diabetes such as frequent urination and
+    thirsting.<br>
+    <br>
+    Healthy heart : -<br>
+    <br>
+    jamun is laden with high amount of potassium. Regular consumption of jamun
+    prevent hardening of arteries,reduces various symptoms of high blood pressure
+    controlling hypertension prevent stroke & cardiac problem.100 gm jamun contain
+    79 mg potassium .
+    <br>
+    <br>
+    Shield against immunity – its strong antiviral ,antifungal,antibacterial
+    property,also used for treating wound.
+    <br>
+    <br>
+    Jamun also contain high allcaloid effective in controlling hyperglacemia or high
+    blood sugar.</h3></h3>
+    <br>
+    <br>
+    <hr class="rounded2"/>
+    <br>
+    <br>
+
+    <h2>2) Neem -</h2>
+    <h3>for non ketonic and insulin sensitive diabetic patient. Neem leaf extracts can
+      reduce insulin requirement by 30 to 50 % .</h3>
+      <br>
+      <br>
+      <hr class="rounded1"/>
+      <BR>
+        <BR>
+      <h2>3) Karela -</h2>
+      <h3>Bitter gourd contain polypeptide P or P insulin which has been shown to control
+        diabetic naturally.</h3>
+        <br>
+        <br>
+        <hr class="rounded"/>
+        <BR>
+          <BR>
+            <h2>4) Daruharidra -</h2>
+            <h3>
+            Berberine in daruharidra has blood sugar loweners effect.it reduces the increase
+            in glucose level in blood. It improves insulin sensitivity and promotes the uptake
+            of glucose by the cell and tissue.</h3>  
+            <BR>
+              <BR>
+                <hr class="rounded1"/>
+                <BR>
+                  <BR>
+            <h2>5)  Guduchi –</h2>
+              <h3>
+              
+                It is regarded on a natural anti hyper glyconic agent as it lowers levels of blood
+                sugar or glucose.it is hyper glycerin & direct benefit for diabetes management. </h3>  
+              <BR>
+              <BR>
+               <hr class="rounded2"/>
+               <BR>
+               <BR>
+                <h2>5) Gudmor –</h2>
+                <h3>
+                  Helps you fight sugar craving and lower high blood sugar level. Stimulate insulin
+                  secretion & regenerate of pancreas islet cell both of which can help lower blood
+                  sugar.
+                  </h3>  
+                <BR>
+                <BR>
+                 <hr class="rounded"/>
+                 <BR>
+                 <BR>
+                  <h2>6) Amlaki –</h2>
+                  <h3>
+                  Prevent spike after meals prevent hyper glycerin cardiac complication.
+                    </h3>  
+                  <BR>
+                  <BR>
+                   <hr class="rounded1"/>
+                   <BR>
+                   <BR>
+                    <h2>7) Triphala –</h2>
+                   <h3>
+                    Lowered blood glucose level. Both fasting and PP blood glucose were reduced .
+                    </h3>  
+                  <BR>
+                  <BR>
+                   <hr class="rounded2"/>
+                   <BR>
+                   <BR>
+                    <h2>8) Arjun –</h2>
+                    <h3>
+                      
+                       - It strengthens and tones the heart muscle and helps in proper functioning of the
+                      heart ,
+                      <br>
+                     -  Stengr antihypertensive properly and helps reduce in high blood pressure.
+                     </h3>  
+                   <BR>
+                   <BR>
+                    <hr class="rounded"/>
+                    <BR>
+                    <BR>
+
+                      <h2>9) Kutki –</h2>
+                      <h3>
+                        Antibiotic,livertonic,controls diabetes and cleanser the gut & expels the
+                        unwanted content from the body.
+                       </h3>  
+                     <BR>
+                     <BR>
+                      <hr class="rounded1"/>
+                      <BR>
+                      <BR>
+                        <BR>
+  
+  <a href="flip.html" class="next2">Previous </a>
+ </head>
+ 
+   
+     
+      
+  
+  <!--HERE THE MAIN CODE ENDS OF ABOUT US/////////////////////////////////////////////////ABOUT US ENDS//////////-->
+  
+  
+  <script>
+    // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+        document.getElementById("navbar").style.padding = "20px 20px";
+        document.getElementById("logo").style.scale = 0;
+        
+      } 
+       else {
+        document.getElementById("navbar").style.padding = "80px 20px";
+        document.getElementById("logo").style.fontSize = "35px";
+      }
+    }
+    </script>
+
+</body>
+</html>
